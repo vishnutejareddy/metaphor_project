@@ -108,6 +108,9 @@
         <button type="submit">Submit</button>
     </form>
     <button id="clear-button">Clear</button>
+    <div id="loading" style="display:none;">
+        Loading...
+    </div>
     <div id="results">
         {% if papers %}
             {% for paper in papers %}
@@ -125,6 +128,10 @@
         document.getElementById('subject').value = "";
         document.getElementById('num_results').value = "";
         document.getElementById('results').innerHTML = "";
+    });
+
+    document.getElementById('search-form').addEventListener('submit', function() {
+        document.getElementById('loading').style.display = 'block';
     });
 </script>
 
