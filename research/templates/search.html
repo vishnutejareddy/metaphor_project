@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <title>Academic Research Assistant</title>
+</head>
+<body>
+    <h1>Academic Research Assistant</h1>
+    <form id="search-form" method="post">
+        {% csrf_token %}
+        <input type="text" id="subject" name="subject" placeholder="Enter research subject" required>
+        <input type="number" id="num_results" name="num_results" placeholder="Number of Results" min="1" required>
+        <button type="submit">Submit</button>
+    </form>
+    <button id="clear-button">Clear</button>
+    <div id="results">
+        {% if papers %}
+            {% for paper in papers %}
+                <div>
+                    <h3>{{ paper.title }}</h3>
+                    <p>{{ paper.summary }}</p>
+                    <a href="{{ paper.link }}" target="_blank">Read More</a>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
+<script>
+    document.getElementById('clear-button').addEventListener('click', function() {
+        document.getElementById('subject').value = "";
+        document.getElementById('num_results').value = "";
+        document.getElementById('results').innerHTML = "";
+    });
+</script>
+
+</html>
