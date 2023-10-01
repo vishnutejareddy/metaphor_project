@@ -1,0 +1,98 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, form, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Add a dark background color and some padding around the entire page */
+body {
+    background-color: #2E2E2E;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Give header a darker background color and some vertical padding */
+h1 {
+    background-color: #1C1C1C;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Style form */
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #4C4C4C;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+}
+
+button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Clear button styles */
+#clear-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#clear-button:hover {
+    background-color: darkred;
+}
+
+/* Results */
+#results {
+    margin-top: 20px;
+}
+
+#results > div {
+    background-color: #333;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#results h3 {
+    margin-bottom: 10px;
+}
+
+#results p {
+    margin-bottom: 10px;
+}
+
+#results a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#results a:hover {
+    text-decoration: underline;
+}
